@@ -1,10 +1,10 @@
 # blockchain-scorestore
 blockchain-scorestore: game scores
 
-powershell 01:
+#powershell 01:
     testrpc
 
-powershell 02:
+#powershell 02:
     truffle compile
     truffle migrate
     truffle console
