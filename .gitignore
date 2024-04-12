@@ -17,7 +17,7 @@ package
 *.exe
 
 # do not include some files
-*.package-lock.json
+package-lock.json
 
 # do not include the Connectors Json Db file
 connectors.json
