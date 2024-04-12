@@ -1,9 +1,9 @@
 {
-  "name": "cubeet-team-employee",
+  "name": "vnapp-inventory",
   "description": "cubeet-team-employee",
-  "version": "2.4.35",
-  "author": "cubeet",
-  "email": "teamconnect.appservices@cubeet.ai",
+  "version": "0.0.1",
+  "author": "voduyanh",
+  "email": "voduyanh1984@gmail.com",
   "license": "MIT",
   "engine": {
     "node": "18.14.0",
@@ -14,7 +14,6 @@
     "dev": "npx nodemon",
     "start": "node app",
     "build": "NODE_ENV=development && cd ./client && cp .env_develop .env && npm install && npm run build && npm run clean",
-    "devemo": "NODE_ENV=development && cd ./client && cp .env_devemo .env && npm install && npm run build && npm run clean",
     "release": "NODE_ENV=production && cd ./client && cp .env_master .env && npm install && npm run release && npm run clean"
   },
   "dependencies": {
@@ -30,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cubeet/cubeet-team-employee.git"
+    "url": "git+https://github.com/vnonline365/vnapp-inventory.git"
   },
   "bugs": {
-    "url": "https://github.com/Cubeet/cubeet-team-employee/issues"
+    "url": "https://github.com/vnonline365/vnapp-inventory/issues"
   },
-  "homepage": "https://github.com/Cubeet/cubeet-team-employee#readme"
+  "homepage": "https://github.com/vnonline365/vnapp-inventory#readme"
 }
