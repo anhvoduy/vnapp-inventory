@@ -1,0 +1,38 @@
+{
+  "name": "vnapp-inventory",
+  "description": "cubeet-team-employee",
+  "version": "0.0.1",
+  "author": "voduyanh",
+  "email": "voduyanh1984@gmail.com",
+  "license": "MIT",
+  "engine": {
+    "node": "18.14.0",
+    "npm": "9.3.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx nodemon",
+    "start": "node app",
+    "build": "NODE_ENV=development && cd ./client && cp .env_develop .env && npm install && npm run build && npm run clean",
+    "release": "NODE_ENV=production && cd ./client && cp .env_master .env && npm install && npm run release && npm run clean"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnonline365/vnapp-inventory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vnonline365/vnapp-inventory/issues"
+  },
+  "homepage": "https://github.com/vnonline365/vnapp-inventory#readme"
+}
