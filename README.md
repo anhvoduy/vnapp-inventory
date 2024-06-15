@@ -1,4 +1,4 @@
-# Cubeet Auth Api
+# Inventory API
 - Api + SQL DB
 
 # For run docker command
