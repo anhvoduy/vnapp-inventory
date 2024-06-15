@@ -9,10 +9,7 @@
 /coverage
 
 # production
-/build
-
-# do not include some files
-package-lock.json
+#/build
 
 # misc
 .DS_Store

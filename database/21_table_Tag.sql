@@ -1,0 +1,47 @@
+USE [ndemo];
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+--
+-- Table [dbo].[Tag]
+--
+IF (EXISTS (SELECT * 
+			FROM INFORMATION_SCHEMA.TABLES 
+			WHERE TABLE_CATALOG='ndemo' AND TABLE_SCHEMA = 'dbo' AND  TABLE_NAME = 'Tag'))
+BEGIN
+	DROP TABLE [dbo].[Tag]
+END
+GO
+
+BEGIN
+	CREATE TABLE [dbo].[Tag](
+		[Tag_Id] 		INT IDENTITY(1,1) NOT NULL,
+		[Tag_Name] 		NVARCHAR(50) NOT NULL
+	CONSTRAINT [PK_Tag_Id] PRIMARY KEY CLUSTERED 
+	(
+		[Tag_Id] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+END
+GO
+
+-- add tag
+INSERT INTO [dbo].[Tag] (Tag_Name)
+VALUES (N'.Net');
+
+INSERT INTO [dbo].[Tag] (Tag_Name)
+VALUES (N'JQuery');
+
+INSERT INTO [dbo].[Tag] (Tag_Name)
+VALUES (N'KnockoutJs');
+
+INSERT INTO [dbo].[Tag] (Tag_Name)
+VALUES (N'AngularJs');
+
+INSERT INTO [dbo].[Tag] (Tag_Name)
+VALUES (N'NodeJs');

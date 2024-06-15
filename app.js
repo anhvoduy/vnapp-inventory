@@ -1,20 +1,46 @@
 ﻿require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+var express = require('express');
+var cors = require('cors');
+//var { createProxyMiddleware } = require('http-proxy-middleware');
+var bodyParser = require('body-parser');
+var path = require('path');
+var config = require('./config');
 
 // setup express
-const app = express();
-app.use(bodyParser.urlencoded({ extended: true, limit: '3mb', }));
+var app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// setup allow cors
+app.use(cors());
+
+// setup proxy middleware
+// app.use('/api', createProxyMiddleware({
+//     target: process.env.DOMAIN, 
+//     changeOrigin: true
+// }));
 
 // setup app
 app.set('port', process.env.PORT || 3000);
 app.set('host', process.env.HOST || 'localhost');
-app.set('secretKey', process.env.APP_SECRET_KEY || 'teamconnect@cubeet.ai');
+app.set('secretKey', config.secretKey);
 
-// setup api as /v1
-app.use('/v1/api', require('./server/api'));
+// setup api route
+app.use('/v1/api', require('./routes/api'));
+app.use('/v1/api/course', require('./routes/course'));
+app.use('/v1/api/employee', require('./routes/employee'));
+app.use('/v1/api/profile', require('./routes/profile'));
+app.use('/v1/api/video', require('./routes/video'));
+
+/* error handling: this is middleware to handle error */
+app.use(function (err, req, res, next) {
+    let error = {
+        code: err.code,
+        message: err.message
+    };
+	res.status(500);
+	res.json(error);
+});
 
 // setup web site
 const siteApp = path.join(__dirname, 'client/build');
