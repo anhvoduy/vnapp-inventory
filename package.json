@@ -1,38 +1,53 @@
 {
-  "name": "vnapp-inventory",
-  "description": "cubeet-team-employee",
-  "version": "0.0.1",
-  "author": "voduyanh",
-  "email": "voduyanh1984@gmail.com",
-  "license": "MIT",
-  "engine": {
-    "node": "18.14.0",
-    "npm": "9.3.1"
-  },
+  "name": "api-365",
+  "description": "api-365",
+  "version": "2.0.3",
+  "keywords": [
+    "exchange-rates",
+    "gold-price",
+    "prediction",
+    "forecast",
+    "gold"
+  ],
+  "private": true,
+  "license": "ISC",
+  "contact": "vnonline365@gmail.com",
+  "contributors": [
+    {
+      "name": "Vo Duy Anh",
+      "email": "voduyanh1984@gmail.com",
+      "url": "https://github.com/anhvoduy"
+    },
+    {
+      "name": "Nguyen Hoang Quoc Vinh",
+      "email": "nhquocvinh@gmail.com",
+      "url": "https://github.com/vinhnguyenhq"
+    }
+  ],
   "main": "app.js",
+  "engines": {
+    "node": "14.15.0",
+    "npm": "6.14.8"
+  },
   "scripts": {
     "dev": "npx nodemon",
-    "start": "node app",
-    "build": "NODE_ENV=development && cd ./client && cp .env_develop .env && npm install && npm run build && npm run clean",
-    "release": "NODE_ENV=production && cd ./client && cp .env_master .env && npm install && npm run release && npm run clean"
+    "start": "node app"
   },
+  "homepage": ".",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.4",
-    "node-fetch": "^2.7.0"
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "4.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "knex": "^2.3.0",
+    "mssql": "^9.0.1",
+    "path": "0.12.7",
+    "redis": "^3.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vnonline365/vnapp-inventory.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vnonline365/vnapp-inventory/issues"
-  },
-  "homepage": "https://github.com/vnonline365/vnapp-inventory#readme"
+    "nodemon": "2.0.4"
+  }
 }
