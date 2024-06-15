@@ -1,0 +1,53 @@
+{
+  "name": "api-365",
+  "description": "api-365",
+  "version": "2.0.3",
+  "keywords": [
+    "exchange-rates",
+    "gold-price",
+    "prediction",
+    "forecast",
+    "gold"
+  ],
+  "private": true,
+  "license": "ISC",
+  "contact": "vnonline365@gmail.com",
+  "contributors": [
+    {
+      "name": "Vo Duy Anh",
+      "email": "voduyanh1984@gmail.com",
+      "url": "https://github.com/anhvoduy"
+    },
+    {
+      "name": "Nguyen Hoang Quoc Vinh",
+      "email": "nhquocvinh@gmail.com",
+      "url": "https://github.com/vinhnguyenhq"
+    }
+  ],
+  "main": "app.js",
+  "engines": {
+    "node": "14.15.0",
+    "npm": "6.14.8"
+  },
+  "scripts": {
+    "dev": "npx nodemon",
+    "start": "node app"
+  },
+  "homepage": ".",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "4.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "knex": "^2.3.0",
+    "mssql": "^9.0.1",
+    "path": "0.12.7",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.4"
+  }
+}

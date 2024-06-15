@@ -1,0 +1,10 @@
+version: '3'
+services:  
+  web:
+    container_name: demo_gold
+    build: ./
+    ports:
+      - "8080:3000"
+    volumes:
+      - ./:/home/app
+    command: [ "npm", "start" ]
